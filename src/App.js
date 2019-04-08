@@ -1,25 +1,49 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { Component } from "react";
+import "./App.css";
+import SearchBar from "./components/SearchBar";
+import Main from "./components/Main";
+import * as localForage from "localforage";
 class App extends Component {
+  state = {
+    songs: [],
+    loading: false,
+    loadingInit: false,
+    favourites: []
+  };
+  componentDidMount = async () => {
+    let favourites = await localForage.getItem("favourites");
+    if (favourites) this.setState({ favourites });
+  };
+  showResult = async input => {
+    this.setState({ loading: true, loadingInit: true, songs: [] });
+    const url = "https://www.songsterr.com/a/ra/songs.json?pattern=" + input;
+    const response = await fetch(url);
+    let result = await response.json();
+    if (result.length > 10) result = result.slice(0, 10);
+    this.setState({ songs: result, loading: false });
+  };
+  addToFav = async song => {
+    let favourites = [...this.state.favourites, song];
+    await this.setState({ favourites });
+    await localForage.setItem("favourites", favourites);
+  };
+  removeFromFav = async toRemove => {
+    let favourites = this.state.favourites.filter(song => song !== toRemove);
+    await this.setState({ favourites });
+    await localForage.setItem("favourites", favourites);
+  };
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <SearchBar search={this.showResult} />
+        <Main
+          songs={this.state.songs}
+          loading={this.state.loading}
+          loadinginit={this.state.loadingInit}
+          addToFav={this.addToFav}
+          removeFromFav={this.removeFromFav}
+          favourites={this.state.favourites}
+        />
       </div>
     );
   }
