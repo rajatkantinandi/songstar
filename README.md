@@ -1,6 +1,4 @@
-![logo](src/logo.png)
-
-# SongStar
+# ![logo](src/logo.png)
 
 - Search songs
 - Add songs to your favourites list
