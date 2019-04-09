@@ -1,14 +1,113 @@
-<?xml version="1.0"?>
-<svg width="120" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
- <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
- <g class="layer">
-  <title>Layer 1</title>
-  <text stroke="#000000" transform="matrix(0.9805773496627808,0,0,1,0.4570392407476902,0) " font-style="normal" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_1" y="31.158201" x="69.437429" stroke-width="0" fill="#3f007f">SongSt  r</text>
-  <polygon stroke="#000000" stroke-width="0" points="98.18095397949219,11.165289878845215 99.77437591552734,18.810930252075195 104.62646484375,18.975845336914062 100.7591552734375,23.86602783203125 102.16450500488281,31.61359405517578 98.18095397949219,26.990251541137695 94.19740295410156,31.61359405517578 95.60275268554688,23.86602783203125 91.73544311523438,18.975845336914062 96.58753204345703,18.810930252075195 98.18095397949219,11.165289878845215 99.77437591552734,18.810930252075195 " strokeWidth="0" strokecolor="#000000" fill="#ff7f00" orient="point" r2="195.766938" r="489.417346" point="5" shape="star" id="svg_3" cy="16.074522" cx="100.648861"/>
-  <path stroke="#000000" id="svg_4" d="m96.110409,29.289427l2.000247,-7.264585l2.135742,7.20813l-4.13599,0.056455z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#ffffff"/>
-  <g stroke="null" transform="rotate(0.24799633026123047 17.66691780090429,23.71849441528345) " id="svg_15">
-   <ellipse stroke="#3f007f" transform="matrix(0.825689655400622,0.003664304214753416,-0.003573898199397725,0.8465764595288884,1.982740540813861,2.577428874505136) " fill-opacity="0" id="svg_12" ry="5.935264" rx="5.464638" cy="22.38133" cx="17.749928" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="#000000"/>
-   <path stroke="#3f007f" id="svg_14" d="m18.537903,26.548666l3.519963,4.0977c0,0 0.577705,0.532555 1.030154,0.02836c0.452449,-0.504195 0.068367,-0.955857 0.067497,-0.979649c-0.000869,-0.023792 -3.265017,-3.534121 -3.265886,-3.557913c-0.000869,-0.023792 -1.351729,0.411503 -1.351729,0.411503z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="#3f007f"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="120"
+   height="50"
+   version="1.1"
+   id="svg12"
+   sodipodi:docname="logo.svg"
+   inkscape:version="0.92.4 (unknown)">
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1318"
+     inkscape:window-height="746"
+     id="namedview14"
+     showgrid="false"
+     inkscape:zoom="5.8666667"
+     inkscape:cx="79.771276"
+     inkscape:cy="16.589187"
+     inkscape:window-x="48"
+     inkscape:window-y="22"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g10" />
+  <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+  <g
+     class="layer"
+     id="g10"
+     transform="matrix(1.0015073,0,0,1,-7.6880043,0.17045455)">
+    <title
+       id="title2">Layer 1</title>
+    <text
+       transform="scale(0.93925056,1.0646786)"
+       font-style="normal"
+       xml:space="preserve"
+       font-size="24"
+       id="svg_1"
+       y="29.425457"
+       x="78.437035"
+       style="font-style:normal;font-size:22.54201508px;font-family:serif;text-anchor:middle;fill:#3f007f;stroke:#000000;stroke-width:0">SongSt  r</text>
+    <g
+       id="g3726"
+       transform="matrix(1.1057819,0,0,1,-8.9091301,0.34090909)">
+      <polygon
+         transform="translate(6.9886364)"
+         style="fill:#ff7f00;stroke:#000000;stroke-width:0"
+         cx="100.648861"
+         cy="16.074522"
+         id="svg_3"
+         shape="star"
+         point="5"
+         r="489.417346"
+         r2="195.766938"
+         orient="point"
+         strokecolor="#000000"
+         strokeWidth="0"
+         points="98.180954,26.990252 94.197403,31.613594 95.602753,23.866028 91.735443,18.975845 96.587532,18.81093 98.180954,11.16529 99.774376,18.81093 98.180954,11.16529 99.774376,18.81093 104.62646,18.975845 100.75916,23.866028 102.16451,31.613594 " />
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+         inkscape:connector-curvature="0"
+         stroke-linejoin="null"
+         stroke-linecap="null"
+         d="m 103.2695,29.459882 2.00025,-7.264585 2.13574,7.20813 z"
+         id="svg_4" />
+    </g>
+    <g
+       stroke="null"
+       transform="rotate(0.24799633,292.9075,-173.48609)"
+       id="svg_15">
+      <ellipse
+         transform="matrix(0.82568966,0.0036643,-0.0035739,0.84657646,1.9827405,2.5774289)"
+         id="svg_12"
+         ry="5.9352641"
+         rx="5.4646382"
+         cy="22.38133"
+         cx="17.749928"
+         stroke-linecap="null"
+         stroke-linejoin="null"
+         style="fill:#000000;fill-opacity:0;stroke:#3f007f;stroke-dasharray:none" />
+      <path
+         id="svg_14"
+         d="m 18.537903,26.548666 3.519963,4.0977 c 0,0 0.577705,0.532555 1.030154,0.02836 0.452449,-0.504195 0.06837,-0.955857 0.0675,-0.979649 -8.69e-4,-0.02379 -3.265017,-3.534121 -3.265886,-3.557913 -8.69e-4,-0.02379 -1.351729,0.411503 -1.351729,0.411503 z"
+         stroke-linecap="null"
+         stroke-linejoin="null"
+         inkscape:connector-curvature="0"
+         style="fill:#3f007f;stroke:#3f007f;stroke-dasharray:none" />
+    </g>
   </g>
- </g>
 </svg>

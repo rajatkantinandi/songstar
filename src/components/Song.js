@@ -30,6 +30,7 @@ class Song extends Component {
             checked={this.state.starred}
             onChange={this.handleChange}
             ref="starred"
+            title="star/unstar"
           />
           <div className="star-wrapper" />
         </div>

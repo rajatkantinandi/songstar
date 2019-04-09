@@ -6,7 +6,7 @@ class Results extends Component {
     return (
       <div className={this.props.loadinginit ? "results" : "results-hidden"}>
         <h2>Results</h2>
-        {this.props.loading && "Loading..."}
+        {this.props.loading && <div className="loader loader5" />}
         {this.props.songs && this.props.songs.length > 0 && (
           <div className="list-songs">
             {this.props.songs.map(song => (
