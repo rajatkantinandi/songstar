@@ -39,6 +39,11 @@ class SearchBar extends Component {
               value={this.state.input}
               className="search-field"
             />
+            <button className="search-btn" type="submit">
+              <span role="img" aria-label="search">
+                🔍
+              </span>
+            </button>
           </form>
         </header>
         <main />

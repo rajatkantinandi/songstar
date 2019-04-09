@@ -19,7 +19,6 @@ class App extends Component {
     const url = "https://www.songsterr.com/a/ra/songs.json?pattern=" + input;
     const response = await fetch(url);
     let result = await response.json();
-    if (result.length > 10) result = result.slice(0, 10);
     this.setState({ songs: result, loading: false });
   };
   addToFav = async song => {

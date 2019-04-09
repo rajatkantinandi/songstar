@@ -20,8 +20,23 @@ class Song extends Component {
     return (
       <div className="song">
         <div className="song-details">
-          <h2>{this.props.song.title}</h2>
-          <h4>Artist: {this.props.song.artist.name}</h4>
+          <a
+            href={"http://www.songsterr.com/a/wa/song?id=" + this.props.song.id}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h2>{this.props.song.title}</h2>
+          </a>
+          <a
+            href={
+              "http://www.songsterr.com/a/wa/artist?id=" +
+              this.props.song.artist.id
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h4>Artist: {this.props.song.artist.name}</h4>
+          </a>
         </div>
         <div className="star-btn">
           <input
