@@ -27,7 +27,9 @@ class App extends Component {
     await localForage.setItem("favourites", favourites);
   };
   removeFromFav = async toRemove => {
-    let favourites = this.state.favourites.filter(song => song !== toRemove);
+    let favourites = this.state.favourites.filter(
+      song => song.id !== toRemove.id
+    );
     await this.setState({ favourites });
     await localForage.setItem("favourites", favourites);
   };

@@ -8,9 +8,9 @@ class Song extends Component {
   componentWillReceiveProps = nextProps => {
     this.setState({ starred: nextProps.starred });
   };
-  handleChange = () => {
-    this.setState({ starred: this.refs.starred.checked });
-    if (this.refs.starred.checked) {
+  handleChange = async () => {
+    await this.setState({ starred: !this.state.starred });
+    if (this.state.starred) {
       this.props.addToFav(this.props.song);
     } else {
       this.props.removeFromFav(this.props.song);
@@ -44,7 +44,6 @@ class Song extends Component {
             className="star-btn"
             checked={this.state.starred}
             onChange={this.handleChange}
-            ref="starred"
             title="star/unstar"
           />
           <div className="star-wrapper" />
