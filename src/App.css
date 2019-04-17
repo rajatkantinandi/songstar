@@ -69,7 +69,7 @@
   width: 100vw;
   overflow: hidden;
 }
-.favourites {
+.favorites {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -79,7 +79,7 @@
   word-break: break-all;
   text-align: left;
 }
-.favourites .list-songs {
+.favorites .list-songs {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -102,11 +102,11 @@
   width: 98%;
   transition: 0.5s ease-in;
 }
-.favourites .song {
+.favorites .song {
   max-width: 400px;
 }
 .results h2,
-.favourites h2 {
+.favorites h2 {
   font-size: 1.4em;
 }
 .song {
@@ -159,7 +159,7 @@ h4 {
   content: "";
   display: block;
 }
-.star-btn input:checked ~ .star-wrapper {
+.star-btn input:checked + .star-wrapper {
   width: 50px;
   height: 50px;
   background-color: gold;
@@ -235,7 +235,7 @@ ul.pagination li.disabled {
     flex-direction: column-reverse;
   }
   .results,
-  .favourites {
+  .favorites {
     width: 100%;
     margin-left: 5%;
     word-break: break-all;

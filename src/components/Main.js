@@ -1,22 +1,22 @@
 import React, { Component } from "react";
 import "../App.css";
 import Results from "./Results";
-import Favourites from "./Favourites";
+import Favorites from "./Favorites";
 class Main extends Component {
   render() {
     return (
       <div className="main-content">
-        <Favourites
-          favourites={this.props.favourites}
+        <Favorites
+          favorites={this.props.favorites}
           removeFromFav={this.props.removeFromFav}
         />
         <Results
           songs={this.props.songs}
           loading={this.props.loading}
-          loadinginit={this.props.loadinginit}
+          isLoadingStarted={this.props.isLoadingStarted}
           addToFav={this.props.addToFav}
           removeFromFav={this.props.removeFromFav}
-          favourites={this.props.favourites}
+          favorites={this.props.favorites}
         />
       </div>
     );

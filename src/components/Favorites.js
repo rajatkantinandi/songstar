@@ -2,33 +2,33 @@ import React, { Component } from "react";
 import "../App.css";
 import Song from "./Song";
 
-class Favourites extends Component {
+class Favorites extends Component {
   state = {
     input: "",
-    favourites: []
+    favorites: []
   };
   componentWillReceiveProps = nextProps => {
-    this.setState({ favourites: nextProps.favourites });
+    this.setState({ favorites: nextProps.favorites });
   };
   handleChange = input => {
     if (input !== "") {
       const regex = new RegExp(input, "gi");
       this.setState({
         input,
-        favourites: this.state.favourites.filter(
+        favorites: this.state.favorites.filter(
           song => regex.test(song.title) || regex.test(song.artist.name)
         )
       });
     } else {
-      this.setState({ input, favourites: this.props.favourites });
+      this.setState({ input, favorites: this.props.favorites });
     }
   };
   render() {
     return (
-      <div className="favourites">
+      <div className="favorites">
         <h2>Starred Songs</h2>
         <div style={{ width: "100%" }}>
-          {this.props.favourites.length === 0 ? (
+          {this.props.favorites.length === 0 ? (
             <span>Starred songs will be listed here...</span>
           ) : (
             <div style={{ width: "100%" }}>
@@ -40,7 +40,7 @@ class Favourites extends Component {
                 className="search-field small"
               />
               <div className="list-songs">
-                {this.state.favourites.map(song => (
+                {this.state.favorites.map(song => (
                   <Song
                     song={song}
                     key={song.id}
@@ -56,4 +56,4 @@ class Favourites extends Component {
     );
   }
 }
-export default Favourites;
+export default Favorites;

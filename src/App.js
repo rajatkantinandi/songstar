@@ -7,31 +7,31 @@ class App extends Component {
   state = {
     songs: [],
     loading: false,
-    loadingInit: false,
-    favourites: []
+    isLoadingStarted: false,
+    favorites: []
   };
   componentDidMount = async () => {
-    let favourites = await localForage.getItem("favourites");
-    if (favourites) this.setState({ favourites });
+    let favorites = await localForage.getItem("favorites");
+    if (favorites) this.setState({ favorites });
   };
   showResult = async input => {
-    this.setState({ loading: true, loadingInit: true, songs: [] });
+    this.setState({ loading: true, isLoadingStarted: true, songs: [] });
     const url = "https://www.songsterr.com/a/ra/songs.json?pattern=" + input;
     const response = await fetch(url);
     let result = await response.json();
     this.setState({ songs: result, loading: false });
   };
   addToFav = async song => {
-    let favourites = [...this.state.favourites, song];
-    await this.setState({ favourites });
-    await localForage.setItem("favourites", favourites);
+    let favorites = [...this.state.favorites, song];
+    await this.setState({ favorites });
+    await localForage.setItem("favorites", favorites);
   };
   removeFromFav = async toRemove => {
-    let favourites = this.state.favourites.filter(
+    let favorites = this.state.favorites.filter(
       song => song.id !== toRemove.id
     );
-    await this.setState({ favourites });
-    await localForage.setItem("favourites", favourites);
+    await this.setState({ favorites });
+    await localForage.setItem("favorites", favorites);
   };
   render() {
     return (
@@ -40,10 +40,10 @@ class App extends Component {
         <Main
           songs={this.state.songs}
           loading={this.state.loading}
-          loadinginit={this.state.loadingInit}
+          isLoadingStarted={this.state.isLoadingStarted}
           addToFav={this.addToFav}
           removeFromFav={this.removeFromFav}
-          favourites={this.state.favourites}
+          favorites={this.state.favorites}
         />
       </div>
     );
