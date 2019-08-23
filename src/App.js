@@ -10,10 +10,12 @@ class App extends Component {
     isLoadingStarted: false,
     favorites: []
   };
+
   componentDidMount = async () => {
     let favorites = await localForage.getItem("favorites");
     if (favorites) this.setState({ favorites });
   };
+
   showResult = async input => {
     this.setState({ loading: true, isLoadingStarted: true, songs: [] });
     const url = "https://www.songsterr.com/a/ra/songs.json?pattern=" + input;
@@ -21,11 +23,13 @@ class App extends Component {
     let result = await response.json();
     this.setState({ songs: result, loading: false });
   };
+
   addToFav = async song => {
     let favorites = [...this.state.favorites, song];
     await this.setState({ favorites });
     await localForage.setItem("favorites", favorites);
   };
+
   removeFromFav = async toRemove => {
     let favorites = this.state.favorites.filter(
       song => song.id !== toRemove.id
@@ -33,6 +37,7 @@ class App extends Component {
     await this.setState({ favorites });
     await localForage.setItem("favorites", favorites);
   };
+
   render() {
     return (
       <div className="App">

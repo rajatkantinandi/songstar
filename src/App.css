@@ -4,6 +4,7 @@
   font-family: "Comfortaa", cursive;
   font-size: 13px;
 }
+
 .App {
   text-align: center;
 }
@@ -17,6 +18,7 @@
   margin-bottom: 20px;
   transition: 0.7s ease-out;
 }
+
 .App-header.loaded {
   height: 80px;
   flex-direction: row;
@@ -27,10 +29,12 @@
   width: 80px;
   height: 65px;
 }
+
 .logo {
   width: 240px;
   height: 100px;
 }
+
 .search-field {
   width: 75vw;
   padding: 8px 20px;
@@ -39,21 +43,54 @@
   outline: none;
   font-size: 20px;
   box-shadow: 0px 0px 1px 2px inset #939;
+  transition: 0.5s ease-out;
 }
+
 .search-field:focus {
   box-shadow: 0px 0px 1px 2px inset #ccc;
   border-bottom: 4px solid #939;
+  outline: none;
 }
+
+form.invalid .search-field:focus {
+  box-shadow: 0px 0px 2px 3px inset red;
+  border: none;
+}
+
+form.invalid::after {
+  content: "Search Keyword must not be empty..";
+  position: absolute;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fcc;
+  background: darkred;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+form.invalid::before {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 5px solid transparent;
+  border-left-color: darkred;
+  border-bottom-color: darkred;
+  margin: 40px 10px;
+}
+
 .search-btn {
   position: absolute;
   z-index: 5;
-  padding: 8px;
   border-radius: 10px;
   background: lavender;
   margin: 4px -38px;
   border: none;
   outline: none;
+  height: 30px;
 }
+
 .search-field.small {
   width: 100%;
   margin-bottom: 8px;
@@ -62,6 +99,7 @@
   border-radius: 5px;
   max-width: 300px;
 }
+
 .main-content {
   display: flex;
   flex-direction: row;
@@ -69,6 +107,7 @@
   width: 100vw;
   overflow: hidden;
 }
+
 .favorites {
   display: flex;
   flex-direction: column;
@@ -79,15 +118,18 @@
   word-break: break-all;
   text-align: left;
 }
+
 .favorites .list-songs {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
 }
+
 .results-hidden {
   display: none;
 }
+
 .results {
   display: flex;
   flex-direction: column;
@@ -98,17 +140,21 @@
   word-break: break-all;
   text-align: left;
 }
+
 .results .list-songs {
   width: 98%;
   transition: 0.5s ease-in;
 }
+
 .favorites .song {
   max-width: 400px;
 }
+
 .results h2,
 .favorites h2 {
   font-size: 1.4em;
 }
+
 .song {
   display: flex;
   flex-direction: row;
@@ -123,27 +169,33 @@
   width: 90%;
   box-shadow: 0px 0px 10px -2px black;
 }
+
 .song h2,
 h4 {
   margin: 2px;
 }
+
 .song h2 {
   font-size: 1.3em;
 }
+
 .song h4 {
   font-size: 0.9em;
 }
+
 .song-details {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+
 .star-btn {
   width: 50px;
   height: 50px;
   margin-left: auto;
   margin-right: 2px;
 }
+
 .star-btn input {
   opacity: 0;
   width: 50px;
@@ -151,6 +203,7 @@ h4 {
   position: absolute;
   z-index: 5;
 }
+
 .star-btn .star-wrapper{
   width: 50px;
   height: 50px;
@@ -159,6 +212,7 @@ h4 {
   transition:0.5s ease-out;
   background:black;
 }
+
 @keyframes star{
   40%{
     background:gold;
@@ -169,6 +223,7 @@ h4 {
     transform:scale(1);
   }
 }
+
 .star-btn input:checked + .star-wrapper {
   width: 50px;
   height: 50px;
@@ -198,6 +253,7 @@ h4 {
     transform: rotatez(-360deg);
   }
 }
+
 .loader5::before {
   content: "";
   color: white;
@@ -209,10 +265,12 @@ h4 {
   border-left-color: transparent;
   animation: load5 1s infinite ease-in-out;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 ul.pagination {
   list-style: none;
   display: flex;
@@ -221,6 +279,7 @@ ul.pagination {
   justify-content: center;
   padding: 2px;
 }
+
 ul.pagination li {
   padding: 6px 10px;
   text-align: center;
@@ -232,16 +291,20 @@ ul.pagination li {
   box-shadow: 0px 0px 2px 1px grey;
   cursor: pointer;
 }
+
 ul.pagination li:hover {
   background: #ddf;
 }
+
 ul.pagination li.active {
   background: indigo;
   color: white;
 }
+
 ul.pagination li.disabled {
   color: grey;
 }
+
 @media (max-width: 500px) {
   .main-content {
     flex-direction: column-reverse;

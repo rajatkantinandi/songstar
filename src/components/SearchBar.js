@@ -2,23 +2,32 @@ import React, { Component } from "react";
 import logo from "../logo.png";
 import logo_small from "../logo_small.svg";
 import "../App.css";
+import { getParamsFromUrl } from '../helpers/urlHelper';
 
 class SearchBar extends Component {
   state = {
     input: "",
-    loaded: false
+    loaded: false,
+    isInvalid: false,
   };
+
+  componentDidMount() {
+    const queryParams = getParamsFromUrl();
+
+    this.setState({ input: queryParams.q || '' }, this.search);
+  }
+
   handleChange = input => {
-    this.setState({ input });
+    this.setState({ input, isInvalid: input.trim().length === 0 });
   };
-  search = async event => {
-    event.preventDefault();
-    if (this.state.input.length === 0) alert("Keyword must not be empty");
-    else {
+
+  search = () => {
+    if (this.state.input) {
       this.setState({ loaded: true });
-      await this.props.search(this.state.input);
+      this.props.search(this.state.input);
     }
   };
+
   render() {
     return (
       <div className="App">
@@ -30,14 +39,22 @@ class SearchBar extends Component {
             className="logo"
             alt="logo"
           />
-          <form onSubmit={event => this.search(event)}>
+          <form
+            method="get"
+            action="/"
+            onInvalid={() => this.setState({ isInvalid: true })}
+            className={this.state.isInvalid ? 'invalid' : ''}>
             <input
+              name="q"
               type="text"
               autoFocus
               placeholder="Type a keyword.."
               onChange={input => this.handleChange(input.target.value)}
               value={this.state.input}
               className="search-field"
+              required
+              pattern=".*\S+.*"
+              autoComplete="off"
             />
             <button className="search-btn" type="submit">
               <span role="img" aria-label="search">
