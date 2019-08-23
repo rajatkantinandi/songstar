@@ -2,20 +2,35 @@ import React, { Component } from "react";
 import "../App.css";
 import Song from "./Song";
 import Pagination from "react-js-pagination";
+import { getParamsFromUrl } from '../helpers/urlHelper';
 class Results extends Component {
   state = {
-    activePage: 1,
+    activePage: this.props.page,
     songs: this.props.songs
   };
+
   handlePageChange = pageNumber => {
     this.setState({ activePage: pageNumber });
+    const queryParams = getParamsFromUrl();
+    let queryString = '';
+
+    if (queryParams.q) queryString += `?q=${queryParams.q}&`;
+
+    window.history.pushState({ page: this.state.activePage }, "Search", `${queryString}page=${pageNumber}`);
   };
+
   componentWillReceiveProps = nextProps => {
     if (this.state.songs !== nextProps.songs) {
       this.setState({ activePage: 1, songs: nextProps.songs });
     }
+    if (this.state.activePage !== nextProps.page) {
+      this.setState({ activePage: nextProps.page })
+    }
   };
+
   render() {
+    const activePage = Math.min(this.state.activePage, Math.ceil(this.props.songs.length / 10));
+
     return (
       <div
         className={this.props.isLoadingStarted ? "results" : "results-hidden"}
@@ -24,7 +39,7 @@ class Results extends Component {
         {this.props.loading && <div className="loader loader5" />}
         {this.state.songs.length > 10 && (
           <Pagination
-            activePage={this.state.activePage}
+            activePage={activePage}
             itemsCountPerPage={10}
             totalItemsCount={this.props.songs.length}
             pageRangeDisplayed={5}
@@ -34,10 +49,7 @@ class Results extends Component {
         {this.state.songs && this.state.songs.length > 0 && (
           <div className="list-songs">
             {this.props.songs
-              .slice(
-                (this.state.activePage - 1) * 10,
-                this.state.activePage * 10
-              )
+              .slice((activePage - 1) * 10, activePage * 10)
               .map(song => (
                 <Song
                   song={song}

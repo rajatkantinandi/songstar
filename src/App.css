@@ -33,6 +33,7 @@
 .logo {
   width: 240px;
   height: 100px;
+  cursor: pointer;
 }
 
 .search-field {
@@ -243,14 +244,14 @@ h4 {
 
 @keyframes load5 {
   40% {
-    transform: rotatez(-180deg);
+    transform: rotateZ(-180deg);
     border-width: 16px;
   }
   80% {
-    transform: rotatez(-360deg);
+    transform: rotateZ(-360deg);
   }
   100% {
-    transform: rotatez(-360deg);
+    transform: rotateZ(-360deg);
   }
 }
 

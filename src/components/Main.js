@@ -17,6 +17,7 @@ class Main extends Component {
           addToFav={this.props.addToFav}
           removeFromFav={this.props.removeFromFav}
           favorites={this.props.favorites}
+          page={this.props.page}
         />
       </div>
     );
