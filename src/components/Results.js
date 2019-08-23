@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../App.css";
 import Song from "./Song";
 import Pagination from "react-js-pagination";
-import { getParamsFromUrl } from '../helpers/urlHelper';
+import { setQueryParams } from '../helpers/urlHelper';
 class Results extends Component {
   state = {
     activePage: this.props.page,
@@ -10,13 +10,8 @@ class Results extends Component {
   };
 
   handlePageChange = pageNumber => {
-    this.setState({ activePage: pageNumber });
-    const queryParams = getParamsFromUrl();
-    let queryString = '';
-
-    if (queryParams.q) queryString += `?q=${queryParams.q}&`;
-
-    window.history.pushState({ page: this.state.activePage }, "Search", `${queryString}page=${pageNumber}`);
+    this.props.setPage(pageNumber);
+    setQueryParams({ page: pageNumber });
   };
 
   componentWillReceiveProps = nextProps => {

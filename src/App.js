@@ -82,6 +82,7 @@ class App extends Component {
           removeFromFav={this.removeFromFav}
           favorites={this.state.favorites}
           page={this.state.page}
+          setPage={page => this.setState({ page })}
         />
       </div>
     );
