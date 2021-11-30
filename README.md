@@ -1,4 +1,4 @@
-# ![logo](src/logo.png)
+# ![logo](src/images/logo.png)
 
 - Search songs
 - Add songs to your favourites list
