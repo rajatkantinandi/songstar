@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
  <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
  <g class="layer">
   <title>Layer 1</title>
@@ -8,7 +8,7 @@
     <polygon stroke="#000000" id="svg_3" fill="#ff7f00" points="33.12589240074158,7.285996198654175 35.035606145858765,17.137061834335327 40.85082983970642,17.349546194076538 36.21586203575134,23.650327444076538 37.90017294883728,33.63271689414978 33.12589240074158,27.675748586654663 28.351611852645874,33.63271689414978 30.03592276573181,23.650327444076538 25.400956869125366,17.349546194076538 31.21617865562439,17.137061834335327 33.12589240074158,7.285996198654175 35.035606145858765,17.137061834335327 " stroke-width="0"/>
     <path stroke="#000000" fill="#ffffff" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" d="m30.502143,30.408817l2.397293,-9.360092l2.559684,9.287352l-4.956979,0.07274l0.000001,0z" id="svg_4"/>
    </g>
-   <text transform="matrix(1.1984987258911133,0,0,1.2884551286697388,-2.380869336611795,-2.623138826340437) " stroke="#000000" opacity="0.55" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_2" y="27.683628" x="26.449964" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#3f007f">S</text>
+   <text transform="matrix(1.1984987258911133,0,0,1.2884551286697388,-2.380869336611795,-2.623138826340437) " stroke="#000000" opacity="0.55" text-anchor="middle" font-family="serif" font-size="24" id="svg_2" y="27.683628" x="26.449964" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#3f007f">S</text>
    <g stroke="null" id="svg_15" transform="matrix(1.1984874991903547,0.005576870558583379,-0.005187508753853603,1.288443059320095,-2.2576310980048078,-2.721378673283086) ">
     <ellipse stroke="#3f007f" fill="#000000" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" cx="14.304308" cy="19.147362" rx="5.464638" ry="5.935264" id="svg_12" fill-opacity="0" transform="matrix(0.825689655400622,0.003664304214753416,-0.003573898199397725,0.8465764595288884,1.982740540813861,2.577428874505136) "/>
     <path stroke="#3f007f" fill="#3f007f" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" d="m15.704448,23.798239l3.519963,4.0977c0,0 0.577705,0.532555 1.030154,0.02836c0.452449,-0.504195 0.068367,-0.955857 0.067497,-0.979649c-0.000869,-0.023792 -3.265017,-3.534121 -3.265886,-3.557913c-0.000869,-0.023792 -1.351729,0.411503 -1.351729,0.411503l0.000001,-0.000001z" id="svg_14"/>
