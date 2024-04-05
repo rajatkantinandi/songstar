@@ -1,19 +1,10 @@
-import React, { useEffect, useState } from "react";
-import "../App.css";
-import Song from "./Song";
-import Pagination from "react-js-pagination";
-import { setQueryParams } from "../helpers/urlHelper";
+import React, { useEffect, useState } from 'react';
+import '../App.css';
+import Song from './Song';
+import Pagination from 'react-js-pagination';
+import { setQueryParams } from '../helpers/urlHelper';
 
-export default function Results({
-  songs,
-  page,
-  addToFav,
-  removeFromFav,
-  isLoadingStarted,
-  setPage,
-  isLoading,
-  favorites,
-}) {
+export default function Results({ songs, page, addToFav, removeFromFav, setPage, isLoading, isFetched, favorites }) {
   const [activePage, setActivePage] = useState(page);
 
   const handlePageChange = (pageNumber) => {
@@ -26,7 +17,7 @@ export default function Results({
   }, [page, songs]);
 
   return (
-    <div className={isLoadingStarted ? "results" : "results-hidden"}>
+    <div className={isFetched || isLoading ? 'results' : 'results-hidden'}>
       <h2>Results</h2>
       {isLoading && <div className="loader loader5" />}
       {songs.length > 10 && (
