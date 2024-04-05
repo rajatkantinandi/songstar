@@ -1,25 +1,16 @@
-import React from "react";
-import "../App.css";
-import Results from "./Results";
-import Favorites from "./Favorites";
+import React from 'react';
+import '../App.css';
+import Results from './Results';
+import Favorites from './Favorites';
 
-export default function Main({
-  favorites,
-  isLoading,
-  songs,
-  isLoadingStarted,
-  addToFav,
-  removeFromFav,
-  page,
-  setPage,
-}) {
+export default function Main({ favorites, isLoading, songs, isFetched, addToFav, removeFromFav, page, setPage }) {
   return (
     <div className="main-content">
       <Favorites favorites={favorites} removeFromFav={removeFromFav} />
       <Results
         songs={songs}
         isLoading={isLoading}
-        isLoadingStarted={isLoadingStarted}
+        isFetched={isFetched}
         addToFav={addToFav}
         removeFromFav={removeFromFav}
         favorites={favorites}

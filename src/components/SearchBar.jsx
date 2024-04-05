@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from "react";
-import logo from "../images/logo.svg";
-import logo_small from "../images/logo_small.svg";
-import "../App.css";
+import React, { useEffect, useState } from 'react';
+import logo from '../images/logo.svg';
+import logo_small from '../images/logo_small.svg';
+import '../App.css';
 import { setQueryParams } from '../helpers/urlHelper';
 
-export default function SearchBar({ searchTerm, search, reset }) {
+export default function SearchBar({ searchTerm, onSearch, reset }) {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInvalid, setIsInvalid] = useState(false);
   const [input, setInput] = useState(searchTerm);
 
-  const handleChange = input => {
+  const handleChange = (input) => {
     setInput(input);
-    setIsInvalid(input.trim().length === 0);
   };
 
   useEffect(() => {
@@ -27,14 +25,12 @@ export default function SearchBar({ searchTerm, search, reset }) {
     setQueryParams({ q: input, page: 1 });
 
     setIsLoaded(true);
-    search(input);
+    onSearch(input);
   };
 
   return (
     <div className="App">
-      <header
-        className={isLoaded ? "App-header loaded" : "App-header"}
-      >
+      <header className={isLoaded ? 'App-header loaded' : 'App-header'}>
         <img
           src={isLoaded ? logo_small : logo}
           className="logo"
@@ -45,16 +41,13 @@ export default function SearchBar({ searchTerm, search, reset }) {
             setIsLoaded(false);
           }}
         />
-        <form
-          onSubmit={performSearch}
-          onInvalid={() => setIsInvalid(true)}
-          className={isInvalid ? 'invalid' : ''}>
+        <form onSubmit={performSearch}>
           <input
             name="q"
             type="text"
             autoFocus
             placeholder="Type a keyword.."
-            onChange={input => handleChange(input.target.value)}
+            onChange={(input) => handleChange(input.target.value)}
             value={input}
             className="search-field"
             required
@@ -62,9 +55,7 @@ export default function SearchBar({ searchTerm, search, reset }) {
             autoComplete="off"
           />
           <button className="search-btn" type="submit">
-            <span role="img" aria-label="search">
-              🔍
-            </span>
+            🔍 &nbsp; Search
           </button>
         </form>
       </header>
